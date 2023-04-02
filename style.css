@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cambria;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background-color:rgba(22, 168, 144, 0.7);
+}
+
+.container{
+    background-color: white;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.container .logo img{
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    left: 76%;
+    top: 3px;
+    border-radius: 49%;
+    border: 4px solid #b6319a;
+}
+
+.container form .title{
+    font-size: 28px;
+    font-weight: 580px;
+    margin: 1px 0px 8px 0px;
+    position: relative;
+
+}
+
+.container form .title::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 4px;
+    background-color: rgb(119, 93, 180);
+}
+
+.container form .input-box{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.container form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    
+}
+
+.container form .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background:#ccc;
+    left: 0;
+    right: 0;
+}
+
+.container form .underline:after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color:red;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus ~ .underline:after,
+.container form .input-box input:valid ~ .underline:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container form .button{
+    margin: 36px 0px 20px 0px;
+}
+
+.container form .input-box input[type="submit"]{
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    background: red;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover{
+   letter-spacing: 1px;
+   background: rgba(0, 0, 0, 0.15);
+   color: red;
+   font-weight: bold;
+   border-radius: 6px;
+}
+
+.container .text{
+    font-size: 16px;
+    text-align: center;
+}
+
+.container .github a,
+.container .twitter a,
+.container .facebook a{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    padding-left: 20px;
+    color:rgb(184, 16, 66);
+    line-height: 40px;
+    border-radius: 5px;
+}
+
+.container .github a{
+    background-color:rgb(73, 19, 19);
+    margin: 20px 0 15px 0;
+}
+
+.container .github a:hover{
+    background-color: #24292e;
+}
+.container .twitter a{
+    background-color: #1ad1f2;
+    margin: 20px 0 15px 0;
+}
+
+.container .twitter a:hover{
+    background-color: #75c6d4;
+}
+
+.container .facebook a{
+    background-color: #4267b2;
+    margin: 20px 0 50px 0;
+}
+
+.container .facebook a:hover{
+    background-color: #8797b6;
+}
+
+.container .github i,
+.container .twitter i,
+.container .facebook i{
+    font-size: 20px;
+    padding-right: 22px;
+}
